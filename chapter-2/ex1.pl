@@ -8,7 +8,7 @@ sub grep_file {
 		open my $fp, $file;
 		
 		while(my $line = <$fp>) {
-			if($line =~ m/$pattern/) {
+			if($line =~ qr/$pattern/) {
 				print $line;
 			}
 		}
